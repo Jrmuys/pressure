@@ -1,0 +1,23 @@
+<div *ngIf="!loading" class="container">
+  <h2>Daily</h2>
+  <ngx-charts-line-chart
+    [scheme]="colorScheme"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxis]="xAxis"
+    [yAxis]="yAxis"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+    [timeline]="timeline"
+    [results]="multi"
+    [yScaleMax]="yScaleMax"
+    [yScaleMin]="yScaleMin"
+    [referenceLines]="referenceLines"
+    [curve]="curve"
+    [showRefLines]="showReferenceLines"
+    (select)="onSelect($event)"
+    (activate)="onActivate($event)"
+    (deactivate)="onDeactivate($event)"
+  >
+  </ngx-charts-line-chart>
+</div>

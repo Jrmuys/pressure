@@ -3,7 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: 'AIzaSyCSTjihOaX6KkV2xZ6H7lZnEnPAbDDGofw',
+    authDomain: 'haleigh-pressure.firebaseapp.com',
+    projectId: 'haleigh-pressure',
+    storageBucket: 'haleigh-pressure.appspot.com',
+    messagingSenderId: '423242093842',
+    appId: '1:423242093842:web:12b861e9150b3bf85b8fcb',
+    measurementId: 'G-61WNN29WFT',
+  },
+  apiUrl: 'http://localhost:5001/haleigh-pressure/us-central1/',
+  apiKey: '096142cee720162db205cb2d60f25906',
 };
 
 /*

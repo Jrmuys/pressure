@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "pressure:build:production",
+            "firebaseProject": "haleigh-pressure",
+            "firebaseHostingSite": "haleigh-pressure"
+          }
         }
       }
     }

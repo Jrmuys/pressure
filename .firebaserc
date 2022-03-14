@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "haleigh-pressure"
+  },
+  "targets": {
+    "haleigh-pressure": {
+      "hosting": {
+        "pressure": [
+          "haleigh-pressure"
+        ]
+      }
+    }
+  }
+}
