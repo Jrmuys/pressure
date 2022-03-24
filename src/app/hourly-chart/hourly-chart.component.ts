@@ -27,6 +27,7 @@ export class HourlyChartComponent implements OnInit {
   animations: boolean = true;
   xAxis: boolean = true;
   yAxis: boolean = true;
+  units: 'inHg' | 'hPa' = 'inHg';
   showYAxisLabel: boolean = false;
   showXAxisLabel: boolean = false;
   xAxisLabel: string = 'Hour';
@@ -34,7 +35,7 @@ export class HourlyChartComponent implements OnInit {
   timeline: boolean = false;
   yScaleMin: number = 29.5;
   yScaleMax: number = 30.5;
-  yAxisTicks = [30];
+  yAxisTicks = [29.5, 30, 30.5];
   activeEntries = [
     {
       name: '2022-03-14T13:30:00.000Z',
@@ -109,6 +110,15 @@ export class HourlyChartComponent implements OnInit {
                 item.name.getTime() > new Date().getTime()
               );
             })
+        );
+        // Calculate the max and min
+        this.yScaleMin = Math.min(
+          ...this.multi[0].series.map((item) => item.value),
+          29.5
+        );
+        this.yScaleMax = Math.max(
+          ...this.multi[0].series.map((item) => item.value),
+          30.5
         );
 
         console.log(this.multi);

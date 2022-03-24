@@ -1,4 +1,14 @@
 export const environment = {
+  firebase: {
+    projectId: 'haleigh-pressure',
+    appId: '1:423242093842:web:12b861e9150b3bf85b8fcb',
+    storageBucket: 'haleigh-pressure.appspot.com',
+    locationId: 'us-east1',
+    apiKey: 'AIzaSyCSTjihOaX6KkV2xZ6H7lZnEnPAbDDGofw',
+    authDomain: 'haleigh-pressure.firebaseapp.com',
+    messagingSenderId: '423242093842',
+    measurementId: 'G-61WNN29WFT',
+  },
   production: true,
   firebaseConfig: {
     apiKey: 'AIzaSyCSTjihOaX6KkV2xZ6H7lZnEnPAbDDGofw',

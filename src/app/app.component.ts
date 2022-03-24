@@ -23,6 +23,9 @@ export class AppComponent {
       this.value = data[0].current.pressure / 33.864;
       this.loading = false;
     });
+    // Calculate max and min values
+    this.min = Math.min(this.value, 29.5);
+    this.max = Math.max(this.value, 30.5);
   }
 
   onSelect(event) {

@@ -35,6 +35,8 @@ export class DailyChartComponent implements OnInit {
   yScaleMax: number = 30.5;
   curve = d3.curveNatural;
   currentDate = new Date();
+  yAxisTicks = [29.5, 30, 30.5];
+
   referenceLines = [
     {
       name: new Date(915138 * 1000 * 1800),
@@ -67,6 +69,19 @@ export class DailyChartComponent implements OnInit {
             };
           })
         );
+        // Adjust min and max if above or below
+        this.yScaleMin = Math.min(
+          ...this.multi[0].series.map((item) => item.value),
+          29.5
+        );
+        this.yScaleMax = Math.max(
+          ...this.multi[0].series.map((item) => item.value),
+          30.5
+        );
+        console.log(this.yScaleMin, this.yScaleMax);
+        console.log(...this.multi[0].series.map((item) => item.value));
+        console.log(this.multi[0].series);
+
         // .filter((item) => {
         //   // Only show the next 5 days
         //   return (
