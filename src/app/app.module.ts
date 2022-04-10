@@ -11,6 +11,7 @@ import { AngularFireFunctionsModule } from '@angular/fire/compat/functions';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { DailyChartComponent } from './daily-chart/daily-chart.component';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
 
 @NgModule({
   declarations: [AppComponent, HourlyChartComponent, DailyChartComponent],
@@ -22,6 +23,7 @@ import { DailyChartComponent } from './daily-chart/daily-chart.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     HttpClientModule,
     AngularFireFunctionsModule,
+    AngularFireAnalyticsModule,
     provideFirestore(() => getFirestore()),
   ],
   providers: [],
