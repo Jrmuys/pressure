@@ -1,27 +1,30 @@
-# Pressure
+# Migraine Monitor
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
+Migraine Monitor is a web application that helps people with weather-related migraines by tracking the barometric pressure and providing real-time weather data. It uses Angular and Firebase to collect data from OpenWeatherMap APIs and display it dynamically on the frontend.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Daily and hourly pressure graphs that show the pressure data over the course of a few days and within a day, respectively.
+- Real-time weather data that is updated automatically and displayed on the frontend.
+- Firebase functions that collect data from OpenWeatherMap APIs and store it in the Firebase database.
 
-## Code scaffolding
+## Why Angular and Firebase?
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+I chose to use Angular and Firebase for the following reasons:
 
-## Build
+- Angular is a powerful and popular front-end framework that allows me to build a dynamic and interactive user interface for the web application. It provides a component-based architecture, reactive programming, and a rich ecosystem of libraries and tools, which makes it easy to build and maintain the application. I also have lots of experience with Angular, so this is the natural choice for me (before I learn nextjs)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Firebase is a comprehensive platform for building web and mobile applications that provides a wide range of services and features, including a real-time database, cloud functions, and hosting. It allows me to quickly and easily collect data from OpenWeatherMap APIs and store it in the Firebase database, and to display it dynamically on the frontend using Angular. Additionally, it provides automatic scaling and high availability, which ensures that the application can handle a large number of users and requests without downtime. The main reason for firebase, however, is the ease of setup. It only takes minutes to setup a project and be up and running, while also providing many of the services a full web app needs to run.
 
-## Running unit tests
+## Setup
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To set up and run Migraine Monitor, follow these steps:
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Install the latest version of Angular and Firebase on your computer.
+2. Clone the Migraine Monitor repository and navigate to the project directory.
+3. Install the required dependencies by running `npm install`.
+4. Create a new Firebase project and enable the Cloud Functions and Firestore services.
+5. Create a new OpenWeatherMap account and obtain an API key.
+6. Create a new file called `.env` in the `functions` directory and add the following environment variables:
+   - `OPEN_WEATHER_API_KEY`: Your open weather api key
+7. Update the firebase details in the environment to reflect your project (It won't work if you leave mine in)
